@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu/Documents/DILLM_light_small_crossattn_1/build/cmake_install.cmake",
+		"/home/ubuntu/Documents/DILLM_light_small_crossattn_1/build/pybind11/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

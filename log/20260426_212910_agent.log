@@ -1,0 +1,57 @@
+2026-04-26 21:29:10  Log file: /home/ubuntu/Documents/DILLM_light_small_crossattn_1/log/20260426_212910_agent.log
+2026-04-26 21:29:10  Namespace(CANDIDATE_FEATURES='img_features/ResNet-152-candidate.tsv', IMAGENET_FEATURES='img_features/ResNet-152-imagenet.tsv', TRAINVAL_VOCAB='tasks/R2R/data/trainval_vocab.txt', TRAIN_VOCAB='tasks/R2R/data/train_vocab.txt', accumulate_grad=False, aemb=64, alpha=0.5, angle_feat_size=128, attn='soft', aug=None, batchSize=64, beam=False, best_val_seen=None, best_val_unseen=None, bidir=True, candidate_mask=False, candidates=1, cosine_annealing=False, critic_lr=0.0001, cross_attn=True, dropout=0.2, encode='word', entropy_coef=0.01, epsilon=0.1, fast_train=False, featdropout=0.3, feature_size=640, features='rn50x4', features_fast='img_features/ResNet-152-imagenet-fast.tsv', feedback='sample', fusion_proj=True, gamma=0.9, ignoreid=-100, iters=200000, listener=None, load=None, loadOptim=False, log_dir='snap/agent', lr=0.0001, lr_min=1e-05, maxAction=15, maxDecode=120, maxInput=80, ml_weight=0.2, name='agent', normalize_loss='total', obj_dim=640, optim='adam', optimizer=<class 'torch.optim.adam.Adam'>, option_size=8, option_step=3, param_search=False, proj=512, rnn_dim=512, seed=123, self_train=False, speaker=None, sub_out='max', submit=False, teacher='final', teacher_weight=1.0, train='listener', valid=False, weight_decay=0.0, wemb=256, zero_init=False)
+2026-04-26 21:29:10  Random seed: 123 (deterministic)
+2026-04-26 21:29:10  OLD_VOCAB_SIZE 991
+2026-04-26 21:29:10  VOCAB_SIZE 992
+2026-04-26 21:29:10  VOACB 991
+2026-04-26 21:29:10  Start loading the image feature
+2026-04-26 21:29:19  Finish Loading the image feature from img_features/CLIP-ResNet-50x4-views.tsv in 9.6125 seconds
+2026-04-26 21:29:19  The feature size is 640
+2026-04-26 21:29:19  Start loading the object feature
+2026-04-26 21:29:23  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.3614 seconds
+2026-04-26 21:29:23  Loading navigation graphs for 61 scans
+2026-04-26 21:29:28  R2RBatch loaded with 14025 instructions, using splits: train
+2026-04-26 21:29:28  The feature size is 640
+2026-04-26 21:29:28  Start loading the object feature
+2026-04-26 21:29:31  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.0696 seconds
+2026-04-26 21:29:31  Loading navigation graphs for 11 scans
+2026-04-26 21:29:32  R2RBatch loaded with 2346 instructions, using splits: val_unseen
+2026-04-26 21:29:32  The feature size is 640
+2026-04-26 21:29:32  Start loading the object feature
+2026-04-26 21:29:35  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.1032 seconds
+2026-04-26 21:29:35  Loading navigation graphs for 56 scans
+2026-04-26 21:29:40  R2RBatch loaded with 1020 instructions, using splits: val_seen
+2026-04-26 21:29:42  The feature size is 640
+2026-04-26 21:29:42  Start loading the object feature
+2026-04-26 21:29:45  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.1135 seconds
+2026-04-26 21:29:45  Loading navigation graphs for 61 scans
+2026-04-26 21:29:51  R2RBatch loaded with 14025 instructions, using splits: train
+2026-04-26 21:29:53  Using Bidir in EncoderLSTM
+2026-04-26 21:29:58  ==================================================
+2026-04-26 21:29:58  Model parameter count:
+2026-04-26 21:29:58    encoder                 1569280  (1.57M)
+2026-04-26 21:29:58    decoder                 5518272  (5.52M)
+2026-04-26 21:29:58    critic                   263169  (0.26M)
+2026-04-26 21:29:58    discriminator             53889  (0.05M)
+2026-04-26 21:29:58    TOTAL                   7404610  (7.40M)
+2026-04-26 21:29:58  ==================================================
+2026-04-26 21:29:58  LR schedule: constant lr=0.0001 (no scheduler)
+2026-04-26 21:29:58  Total trainable parameters: 7404610 (7.40M)
+2026-04-26 21:32:23  total_actions 93915.0
+2026-04-26 21:32:23  max_length 1500
+2026-04-26 21:32:52  [val_unseen] Inference speed — avg step: 28.6 ms (35.0 steps/s), avg rollout: 0.43 s (15.0 steps)
+2026-04-26 21:33:17  [val_seen] Inference speed — avg step: 30.9 ms (32.4 steps/s), avg rollout: 0.46 s (15.0 steps)
+2026-04-26 21:33:49  [train] Inference speed — avg step: 33.1 ms (30.2 steps/s), avg rollout: 0.50 s (15.0 steps)
+2026-04-26 21:33:49  3m 50s (- 7688m 58s) (100 0%) , val_unseen , nav_error: 8.822, oracle_error: 7.218, steps: 105.604, lengths: 29.925, success_rate: 0.034, oracle_rate: 0.073, spl: 0.009, step_time: 28.6ms, steps/s: 35.0, val_seen , nav_error: 8.989, oracle_error: 7.502, steps: 106.979, lengths: 29.490, success_rate: 0.039, oracle_rate: 0.082, spl: 0.011, step_time: 30.9ms, steps/s: 32.4, train , nav_error: 9.055, oracle_error: 7.425, steps: 106.261, lengths: 30.308, success_rate: 0.056, oracle_rate: 0.102, spl: 0.017, step_time: 33.1ms, steps/s: 30.2
+2026-04-26 21:35:46  total_actions 95942.0
+2026-04-26 21:35:46  max_length 1500
+2026-04-26 21:36:11  [val_unseen] Inference speed — avg step: 29.9 ms (33.5 steps/s), avg rollout: 0.45 s (15.0 steps)
+2026-04-26 21:36:33  [val_seen] Inference speed — avg step: 32.3 ms (31.0 steps/s), avg rollout: 0.48 s (15.0 steps)
+2026-04-26 21:37:00  [train] Inference speed — avg step: 32.5 ms (30.8 steps/s), avg rollout: 0.49 s (15.0 steps)
+2026-04-26 21:37:01  7m 2s (- 7030m 43s) (200 0%) , val_unseen , nav_error: 7.335, oracle_error: 4.765, steps: 95.098, lengths: 29.945, success_rate: 0.225, oracle_rate: 0.410, spl: 0.073, step_time: 29.9ms, steps/s: 33.5, val_seen , nav_error: 7.471, oracle_error: 5.052, steps: 96.677, lengths: 31.556, success_rate: 0.197, oracle_rate: 0.360, spl: 0.062, step_time: 32.3ms, steps/s: 31.0, train , nav_error: 7.075, oracle_error: 4.836, steps: 95.670, lengths: 31.591, success_rate: 0.214, oracle_rate: 0.383, spl: 0.070, step_time: 32.5ms, steps/s: 30.8
+2026-04-26 21:38:41  total_actions 95989.0
+2026-04-26 21:38:41  max_length 1500
+2026-04-26 21:39:04  [val_unseen] Inference speed — avg step: 27.9 ms (35.9 steps/s), avg rollout: 0.42 s (15.0 steps)
+2026-04-26 21:39:22  [val_seen] Inference speed — avg step: 28.8 ms (34.7 steps/s), avg rollout: 0.43 s (15.0 steps)
+2026-04-26 21:39:45  [train] Inference speed — avg step: 30.8 ms (32.4 steps/s), avg rollout: 0.46 s (15.0 steps)
+2026-04-26 21:39:45  9m 46s (- 6507m 27s) (300 0%) , val_unseen , nav_error: 7.392, oracle_error: 4.828, steps: 94.254, lengths: 29.942, success_rate: 0.218, oracle_rate: 0.396, spl: 0.070, step_time: 27.9ms, steps/s: 35.9, val_seen , nav_error: 7.397, oracle_error: 5.102, steps: 94.229, lengths: 32.208, success_rate: 0.183, oracle_rate: 0.338, spl: 0.055, step_time: 28.8ms, steps/s: 34.7, train , nav_error: 7.019, oracle_error: 4.672, steps: 94.335, lengths: 32.491, success_rate: 0.223, oracle_rate: 0.402, spl: 0.067, step_time: 30.8ms, steps/s: 32.4

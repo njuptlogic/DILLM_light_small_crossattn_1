@@ -1,0 +1,39 @@
+2026-05-24 12:19:46  Log file: /home/ubuntu/Documents/DILLM_light_small_crossattn_1/log/20260524_121946_agent.log
+2026-05-24 12:19:46  Namespace(CANDIDATE_FEATURES='img_features/ResNet-152-candidate.tsv', IMAGENET_FEATURES='img_features/ResNet-152-imagenet.tsv', TRAINVAL_VOCAB='tasks/R2R/data/trainval_vocab.txt', TRAIN_VOCAB='tasks/R2R/data/train_vocab.txt', accumulate_grad=False, aemb=64, alpha=0.5, angle_feat_size=128, attn='soft', aug=None, batchSize=64, beam=False, best_val_seen=None, best_val_unseen=None, bidir=True, candidate_mask=False, candidates=1, cosine_annealing=False, critic_lr=0.0001, cross_attn=False, dropout=0.2, encode='word', entropy_coef=0.01, epsilon=0.1, fast_train=False, featdropout=0.3, feature_size=640, features='rn50x4', features_fast='img_features/ResNet-152-imagenet-fast.tsv', feedback='sample', fusion_proj=False, gamma=0.9, ignoreid=-100, iters=200000, listener=None, load=None, loadOptim=False, log_dir='snap/agent', lr=0.0001, lr_min=1e-05, maxAction=15, maxDecode=120, maxInput=80, ml_weight=0.2, name='agent', normalize_loss='total', obj_dim=640, optim='adam', optimizer=<class 'torch.optim.adam.Adam'>, option_size=8, option_step=3, param_search=False, proj=512, rnn_dim=512, seed=123, self_train=False, speaker=None, sub_out='max', submit=False, teacher='final', teacher_weight=1.0, train='listener', valid=False, weight_decay=0.0, wemb=256, zero_init=False)
+2026-05-24 12:19:46  Random seed: 123 (deterministic)
+2026-05-24 12:19:46  OLD_VOCAB_SIZE 991
+2026-05-24 12:19:46  VOCAB_SIZE 992
+2026-05-24 12:19:46  VOACB 991
+2026-05-24 12:19:46  Start loading the image feature
+2026-05-24 12:19:55  Finish Loading the image feature from img_features/CLIP-ResNet-50x4-views.tsv in 9.3388 seconds
+2026-05-24 12:19:55  The feature size is 640
+2026-05-24 12:19:55  Start loading the object feature
+2026-05-24 12:19:59  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.3917 seconds
+2026-05-24 12:19:59  Loading navigation graphs for 61 scans
+2026-05-24 12:20:04  R2RBatch loaded with 14025 instructions, using splits: train
+2026-05-24 12:20:04  The feature size is 640
+2026-05-24 12:20:04  Start loading the object feature
+2026-05-24 12:20:07  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.0406 seconds
+2026-05-24 12:20:07  Loading navigation graphs for 11 scans
+2026-05-24 12:20:08  R2RBatch loaded with 2346 instructions, using splits: val_unseen
+2026-05-24 12:20:08  The feature size is 640
+2026-05-24 12:20:08  Start loading the object feature
+2026-05-24 12:20:11  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.0338 seconds
+2026-05-24 12:20:11  Loading navigation graphs for 56 scans
+2026-05-24 12:20:15  R2RBatch loaded with 1020 instructions, using splits: val_seen
+2026-05-24 12:20:17  The feature size is 640
+2026-05-24 12:20:17  Start loading the object feature
+2026-05-24 12:20:20  Finish Loading the object feature from img_features/CLIP-obj-RN50-4-1e-6.tsv in 3.0089 seconds
+2026-05-24 12:20:21  Loading navigation graphs for 61 scans
+2026-05-24 12:20:25  R2RBatch loaded with 14025 instructions, using splits: train
+2026-05-24 12:20:27  Using Bidir in EncoderLSTM
+2026-05-24 12:20:32  ==================================================
+2026-05-24 12:20:32  Model parameter count:
+2026-05-24 12:20:32    encoder                 1569280  (1.57M)
+2026-05-24 12:20:32    decoder                 4993088  (4.99M)
+2026-05-24 12:20:32    critic                   263169  (0.26M)
+2026-05-24 12:20:32    discriminator             53889  (0.05M)
+2026-05-24 12:20:32    TOTAL                   6879426  (6.88M)
+2026-05-24 12:20:32  ==================================================
+2026-05-24 12:20:32  LR schedule: constant lr=0.0001 (no scheduler)
+2026-05-24 12:20:32  Total trainable parameters: 6879426 (6.88M)
