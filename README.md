@@ -1,6 +1,6 @@
 # DILLM-Light-Small CrossAttn
 
-本仓库是毕业设计《多模态视觉语言导航模型的轻量化方法研究》的代码与实验材料整理版本。项目基于 [DILLM](https://github.com/wangjw55/DILLM) 进行轻量化改进，面向视觉语言导航（Vision-and-Language Navigation, VLN）任务，在保留 DILLM 指令分解、层级强化学习和多模态融合判别器思想的基础上，进一步压缩模型参数、降低推理开销，并验证其在 ROS 机器人系统中的部署可行性。
+本仓库是关于多模态视觉语言导航模型的轻量化方法研究的代码与实验材料整理版本。项目基于 [DILLM](https://github.com/wangjw55/DILLM) 进行轻量化改进，面向视觉语言导航（Vision-and-Language Navigation, VLN）任务，在保留 DILLM 指令分解、层级强化学习和多模态融合判别器思想的基础上，进一步压缩模型参数、降低推理开销，并验证其在 ROS 机器人系统中的部署可行性。
 
 
 
@@ -74,7 +74,7 @@ class FusionProjection(nn.Module):
 
 ![val seen 环境中的成功导航案例 1](docs/readme_assets/22_fig_3_8.png)
 
-![val unseen 环境中的成功导航案例](docs/readme_assets/24_fig_3_10.png)
+![val unseen 环境中的成功导航案例](docs/readme_assets/39_fig_6.png)
 
 ## ROS 部署验证
 
